@@ -19,10 +19,20 @@
   </head>
 
   <body>
-    <div class="container">
-      <h1>Welcome to Blog Maino</h1>
-      <button class="btn btn-primary">Test Bootstrap Button</button>
+    <div class="bg-primary text-white text-center mb-4 p-4">
+      <%= link_to root_path, class: 'text-white' do %>
+        <h1 class='display-4'>Blog do Alysson Lemes</h1>
+      <% end %>
+      <p class='lead'>
+        Um blog sobre programação, tecnologia e desenvolvimento web.
+      </p>
     </div>
-    <%= yield %>
+    <div class="container">
+      <%= yield %>
+    </div>
+
+    <footer class= 'bg-primary text-white text-center mt-5 p-4'>
+      Copyright @Alysson Lemes <%= Date.current.year %>
+    </footer>
   </body>
 </html>
