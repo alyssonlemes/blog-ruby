@@ -1,6 +1,16 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @post %>
+<div class="card bg-light">
+  <div class="card-body">
+    <h4><%= @post.title %></h4>
+
+    <div class="text-muted mb-2">
+      <em>Por <%= @post.author %> (<%= l @post.created_at, format: :long %>)</em>
+    </div>
+
+    <p><%= @post.body %></p>
+  </div>
+</div>
 
 <div>
   <%= link_to "Edit this post", edit_post_path(@post) %> |

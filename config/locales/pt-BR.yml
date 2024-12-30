@@ -1,0 +1,4 @@
+pt-BR:
+  time:
+    formats:
+      long: "%d de %B de %Y, %H:%M"
