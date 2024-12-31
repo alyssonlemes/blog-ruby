@@ -1,4 +1,14 @@
 pt-BR:
-  time:
-    formats:
-      long: "%d de %B de %Y, %H:%M"
+  activerecord:
+    models:
+      post: 'Post'
+      comment: 'Comentário'
+
+    attributes:
+      post:
+        title: 'Título'
+        author: 'Autor'
+        body: 'Post'
+      comment:
+        author: 'Autor'
+        body: 'Post'
