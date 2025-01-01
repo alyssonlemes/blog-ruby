@@ -109,6 +109,8 @@ GEM
     erubi (1.13.1)
     et-orbi (1.2.11)
       tzinfo
+    friendly_id (5.5.1)
+      activerecord (>= 4.0.0)
     fugit (1.11.1)
       et-orbi (~> 1, >= 1.2.11)
       raabro (~> 1.4)
@@ -181,6 +183,9 @@ GEM
       racc
     pg (1.5.9)
     pg (1.5.9-x64-mingw-ucrt)
+    pg_search (2.3.7)
+      activerecord (>= 6.1)
+      activesupport (>= 6.1)
     propshaft (1.1.0)
       actionpack (>= 7.0.0)
       activesupport (>= 7.0.0)
@@ -344,10 +349,12 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  friendly_id
   importmap-rails
   jbuilder
   kamal
   pg (>= 0.18, < 2.0)
+  pg_search
   propshaft
   pry
   puma (>= 5.0)
