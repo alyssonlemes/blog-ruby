@@ -6,3 +6,4 @@ import "@popperjs/core"
 import "bootstrap"
 
 Rails.start()
+console.log("Rails UJS started")
