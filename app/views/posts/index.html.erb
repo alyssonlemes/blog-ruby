@@ -5,6 +5,11 @@
 
 <hr>
 
+<div class="d-flex justify-content-center">
+  <%= paginate @posts, class: 'pagination-lg' %>
+</div>
+
 <div class="d-flex justify-content-end">
   <%= link_to "Criar novo Post", new_post_path, class:"btn btn-success"%>
 </div>
+

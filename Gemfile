@@ -24,7 +24,8 @@ gem "rails-i18n"
 gem "pry"
 gem "friendly_id"
 gem "pg_search"
-
+gem "kaminari"
+gem "bootstrap-kaminari-views"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ windows jruby ]

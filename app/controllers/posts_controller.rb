@@ -3,8 +3,9 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.order(created_at: :desc)
+    @posts = Post.order(created_at: :desc).page(params[:page]).per(3)
   end
+
 
   def search
     @posts = Post.search(search_params[:q])
