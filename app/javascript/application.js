@@ -1,14 +1,14 @@
-import Rails from "@rails/ujs"
-import "@hotwired/turbo-rails"
-import "controllers"
-import "@popperjs/core"
-import "bootstrap"
+// application.js
+import Rails from '@rails/ujs'
+Rails.start()
 
-$(function () {
-    $('[data-toggle="tooltip"]').tooltip({ trigger: "hover" });
-    });
+import "@hotwired/turbo-rails";
+import "controllers";
+import "bootstrap";
+import "jquery";
+import "@popperjs/core";
 
-Rails.start();
-
-
-  
+// Adicione qualquer configuração adicional
+document.addEventListener("turbo:load", () => {
+  $('[data-toggle="tooltip"]').tooltip({ trigger: "hover" });
+});
