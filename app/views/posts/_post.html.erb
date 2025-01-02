@@ -12,7 +12,7 @@
 
     <%= link_to "Ler Artigo", post, class: 'btn btn-primary' %>
     <%= link_to "Editar", edit_post_path(post), class: 'btn btn-secondary' %>
-    <%= link_to "Apagar", post, method: :delete, data: { turbo_method: :delete, confirm: 'Você tem certeza?' }, class: 'btn btn-danger' %>
+    <%= link_to "Excluir", post, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-danger' %>
 
   </div>
 </div>
