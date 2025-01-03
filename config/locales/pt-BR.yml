@@ -3,7 +3,7 @@ pt-BR:
     models:
       post: 'Post'
       comment: 'Comentário'
-
+      user: 'Usuário'
     attributes:
       post:
         title: 'Título'
@@ -12,6 +12,10 @@ pt-BR:
       comment:
         author: 'Autor'
         body: 'Comentário'
+      user:
+        email: 'E-mail'
+        password: 'Senha'
+        password_confirmation: 'Confirmação de Senha'
 
   views:
     pagination:
@@ -47,39 +51,36 @@ pt-BR:
         subject: "E-mail alterado"
       password_change:
         subject: "Senha alterada"
-    omniauth_callbacks:
-      failure: "Não foi possível autenticar você pelo %{kind} devido a \"%{reason}\"."
-      success: "Autenticado com sucesso pela conta %{kind}."
     passwords:
-      no_token: "Você não pode acessar esta página sem vir de um e-mail de redefinição de senha. Se você veio de um e-mail de redefinição, certifique-se de usar a URL completa fornecida."
+      no_token: "Token não encontrado."
       send_instructions: "Você receberá um e-mail com instruções para redefinir sua senha em alguns minutos."
-      send_paranoid_instructions: "Se o endereço de e-mail estiver em nossa base de dados, você receberá um link de recuperação de senha em alguns minutos."
-      updated: "Sua senha foi alterada com sucesso. Você está autenticado agora."
+      send_paranoid_instructions: "Se o endereço de e-mail estiver em nossa base de dados, você receberá um e-mail com instruções para redefinir sua senha em alguns minutos."
+      updated: "Sua senha foi alterada com sucesso. Você está autenticado."
       updated_not_active: "Sua senha foi alterada com sucesso."
     registrations:
-      destroyed: "Tchau! Sua conta foi cancelada com sucesso. Esperamos vê-lo novamente em breve."
-      signed_up: "Bem-vindo! Você se cadastrou com sucesso."
-      signed_up_but_inactive: "Você se cadastrou com sucesso, mas sua conta ainda não foi ativada."
-      signed_up_but_locked: "Você se cadastrou com sucesso, mas sua conta está bloqueada."
-      signed_up_but_unconfirmed: "Uma mensagem com o link de confirmação foi enviada para o seu e-mail. Por favor, siga o link para ativar sua conta."
-      update_needs_confirmation: "Você atualizou sua conta com sucesso, mas precisamos verificar seu novo endereço de e-mail. Por favor, cheque seu e-mail e siga o link de confirmação."
+      destroyed: "Sua conta foi excluída com sucesso. Esperamos vê-lo novamente em breve."
+      signed_up: "Bem-vindo! Você se registrou com sucesso."
+      signed_up_but_inactive: "Você se registrou com sucesso. No entanto, não foi possível iniciar a sessão porque sua conta ainda não foi ativada."
+      signed_up_but_locked: "Você se registrou com sucesso. No entanto, não foi possível iniciar a sessão porque sua conta está bloqueada."
+      signed_up_but_unconfirmed: "Você se registrou com sucesso. No entanto, não foi possível iniciar a sessão porque sua conta ainda não foi confirmada."
+      update_needs_confirmation: "Sua conta foi atualizada com sucesso, mas precisamos confirmar seu novo endereço de e-mail. Por favor, verifique seu e-mail e siga as instruções para confirmar seu novo endereço."
       updated: "Sua conta foi atualizada com sucesso."
-      updated_but_not_signed_in: "Sua conta foi atualizada com sucesso, mas como sua senha foi alterada, você precisa entrar novamente."
     sessions:
-      signed_in: "Login realizado com sucesso."
-      signed_out: "Logout realizado com sucesso."
-      already_signed_out: "Logout já realizado."
+      signed_in: "Login efetuado com sucesso."
+      signed_out: "Logout efetuado com sucesso."
+      already_signed_out: "Logout já efetuado."
     unlocks:
       send_instructions: "Você receberá um e-mail com instruções para desbloquear sua conta em alguns minutos."
-      send_paranoid_instructions: "Se sua conta existir, você receberá um e-mail com instruções para desbloqueá-la em alguns minutos."
-      unlocked: "Sua conta foi desbloqueada com sucesso. Por favor, entre para continuar."
+      send_paranoid_instructions: "Se o endereço de e-mail estiver em nossa base de dados, você receberá um e-mail com instruções para desbloquear sua conta em alguns minutos."
+      unlocked: "Sua conta foi desbloqueada com sucesso. Por favor, faça login para continuar."
+    shared:
+      links:
+        sign_in: 'Entrar'
+        sign_up: 'Registrar'
+        forgot_your_password: 'Esqueceu sua senha?'
+        didn't_receive_confirmation_instructions: 'Não recebeu as instruções de confirmação?'
   errors:
     messages:
-      already_confirmed: "já foi confirmado, por favor tente entrar"
-      confirmation_period_expired: "precisa ser confirmado dentro de %{period}, por favor solicite um novo"
-      expired: "expirou, por favor solicite um novo"
-      not_found: "não encontrado"
-      not_locked: "não foi bloqueado"
       not_saved:
-        one: "1 erro impediu que este %{resource} fosse salvo:"
-        other: "%{count} erros impediram que este %{resource} fosse salvo:"
+        one: "1 erro proibiu este %{resource} de ser salvo:"
+        other: "%{count} erros proibiram este %{resource} de ser salvo:"

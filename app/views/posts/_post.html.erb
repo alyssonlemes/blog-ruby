@@ -11,8 +11,10 @@
     <p class="text-muted"><%= pluralize(post.comments.count, 'Comentário') %></p>
 
     <%= link_to "Ler Artigo", post, class: 'btn btn-primary' %>
-    <%= link_to "Editar", edit_post_path(post), class: 'btn btn-secondary' %>
-    <%= link_to "Excluir", post, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-danger' %>
 
+    <% if user_signed_in? && post.author == current_user.email %>
+      <%= link_to "Editar", edit_post_path(post), class: 'btn btn-secondary' %>
+      <%= link_to "Excluir", post, method: :delete, data: { confirm: 'Você tem certeza?' }, class: 'btn btn-danger' %>
+    <% end %>
   </div>
 </div>
